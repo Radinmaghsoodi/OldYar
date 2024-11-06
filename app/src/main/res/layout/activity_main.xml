@@ -1,0 +1,156 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16sp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            app:cardBackgroundColor="@color/orange"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+
+                        android:id="@+id/nextKmEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:digits="0123456789.,/"
+                        android:hint="کیلومتر بعدی"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+
+                        android:id="@+id/currentKmEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:digits="0123456789.,/"
+                        android:hint="کیلومتر فعلی"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <EditText
+
+                    android:id="@+id/oilNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="اسم روغن"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="8dp"
+                    android:text="فیلترها :"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/airFilterCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="هوا"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/cabinFilterCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="کابین"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/fuelFilterCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="بنزین"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/oilFilterCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="روغن"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/saveButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/purple"
+                        android:text="ذخیره"
+                        android:textColor="@color/white"
+                        android:textColorLink="#ff6750a4" />
+
+                    <Button
+                        android:id="@+id/delButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:text="پاک کردن"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</FrameLayout>
